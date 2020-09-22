@@ -1,0 +1,16 @@
+.ui-input {
+    padding: .5rem;
+    background: transparent;
+    border-radius: .25rem;
+    border: solid 1px var(--border_color);
+    width: 100%;
+    &::placeholder {
+        color: var(--color_5);
+    }
+}
+
+select.ui-input {
+    option {
+        color: var(--color_0);
+    }
+}

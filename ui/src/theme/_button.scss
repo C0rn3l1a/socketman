@@ -1,0 +1,31 @@
+.ui-button {
+    cursor: pointer;
+    position: relative;
+    padding: .5rem 1.5rem;
+    border: var(--border_color);
+    border-radius: .25rem;
+    background: var(--button_color_1);
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: transparent;
+    }
+
+    &:hover::after {
+        background: var(--highlight_color_hover);
+    }
+    
+    &:active::after {
+        background: var(--highlight_color_active);
+    }
+
+    &:disabled {
+        background: var(--disabled_color);
+        cursor: not-allowed;
+    }
+}

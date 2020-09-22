@@ -1,0 +1,35 @@
+{
+    "name": "socketman",
+    "version": "1.0.0",
+    "description": "postman equivalent for testing websockets",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/C0rn3l1a/socketman.git"
+    },
+    "keywords": [
+        "postman",
+        "websocket",
+        "socketman",
+        "socket",
+        "socket.io",
+        "node"
+    ],
+    "author": "N4cho!",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/C0rn3l1a/socketman/issues"
+    },
+    "homepage": "https://github.com/C0rn3l1a/socketman#readme",
+    "dependencies": {
+        "ansi-colors": "^4.1.1",
+        "websocket": "^1.0.32"
+    },
+    "devDependencies": {
+        "eslint": "^7.9.0"
+    }
+}

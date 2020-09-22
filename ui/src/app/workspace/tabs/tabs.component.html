@@ -1,0 +1,6 @@
+<nav class="tabs">
+    <article class="tab" *ngFor="let event of open_events | async" [class.active]="(event | json) === (active_event | async | json)" (click)="select_event(event)">
+        {{event.title}}
+        <span class="material-icons">clear</span>
+    </article>
+</nav>

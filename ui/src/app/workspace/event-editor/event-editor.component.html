@@ -1,0 +1,14 @@
+<section class="workspace">
+    <div class="namespace">
+        <input ui-input class="namespace-input" type="text" placeholder="Namespace" [(ngModel)]="event.namespace">
+        <select ui-input class="platform-select">
+            <option *ngFor="let platform of platform_list" [value]="platform.tag">{{platform.label}}</option>
+        </select>
+        <button ui-button class="action-button" [disabled]="!event.namespace" (click)="event_in_socket ? send(event) : connect(event)">{{event_in_socket ? 'send' : 'connect'}}</button>
+        <button ui-button class="action-button" >save</button>
+    </div>
+    <div class="interactions">
+        <div #editor_client class="client"></div>
+        <div #editor_server class="server"></div>
+    </div>
+</section>

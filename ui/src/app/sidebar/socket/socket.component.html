@@ -1,0 +1,17 @@
+<div class="sockets">
+    <article class="socket" *ngFor="let socket of socket_list" [class.active]="socket.detail" (click)="socket.detail = !socket.detail">
+        <div class="socket-circle" [class.active]="socket.detail">
+            <ng-container *ngIf="socket.detail">
+                {{socket.host}}
+                <span class="material-icons close" (click)="disconnect(socket)">close</span>
+            </ng-container>
+            <ng-container *ngIf="!socket.detail">
+                {{socket.host[0]}}
+            </ng-container>
+        </div>
+        <ng-container *ngIf="socket.detail">
+            <p>host: {{socket.host}}</p>
+            <!-- <p>port: {{socket.port}}</p> -->
+        </ng-container>
+    </article>
+</div>

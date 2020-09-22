@@ -1,0 +1,87 @@
+.collections {
+    display: flex;
+    flex-direction: column;
+    border-right: solid 1px var(--border_color);
+    height: 100%;
+}
+
+.collection-title {
+    padding: 1rem;
+}
+
+.collection-filter {
+    display: flex;
+    padding: 1rem;
+    input {
+        width: 100%;
+    }
+}
+
+.collections-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.colletion-item {
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-top: 1px solid var(--border_color);
+
+    span.material-icons {
+        user-select: none;
+        cursor: pointer;
+    }
+
+    &:last-child , &.open{
+        border-bottom: 1px solid var(--border_color);
+    }
+
+    &.open{
+        background: var(--sub_background);
+    }
+
+    &:hover {
+        background: var(--highlight_color_hover);
+    }
+
+    &:active {
+        background: var(--highlight_color_active);
+    }
+}
+
+.events {
+    display: flex;
+    flex-direction: column;
+    padding: 0 .5rem;
+}
+
+.event {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px var(--border_color);
+    padding: .5rem;
+    gap: .5rem;
+    
+    &:last-child{
+        border-bottom: none;
+    }
+    
+    &:hover {
+        background: var(--highlight_color_hover);
+    }
+    
+    &:active {
+        background: var(--highlight_color_active);
+    }
+
+    .emit {
+        color: var(--color_6)
+    }
+    
+    .listen {
+        color: var(--color_7)
+    }
+}

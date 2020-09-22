@@ -1,0 +1,68 @@
+
+.sockets {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    // border: solid 1px green;
+}
+
+.socket {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    background: var(--main_background);
+    border: solid 1px var(--border_color);
+    border-left: none;
+    border-radius: 0 .5rem .5rem 0;
+    &.active {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: .5rem;
+        width: min-content;
+        height: min-content;
+        align-items: flex-start;
+        &:hover{
+            width: min-content;
+        }
+    }
+    &:hover{
+        width: 4rem;
+    }
+    transition: all ease 200ms;
+}
+
+.socket-circle {
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 3rem;
+    background-color: var(--color_4);
+    &.active {
+        width: 100%;
+        user-select: auto;
+        cursor: auto;
+    }
+
+    .close {
+        cursor: pointer;
+        font-size: 1rem;
+        padding: .25rem;
+        border-radius: 1.25rem;
+        margin-left: auto;
+        color: var(--sub_background);
+        &:hover {
+            background: rgba(0,0,0,0.1);
+        }
+    }
+}

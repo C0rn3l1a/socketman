@@ -1,0 +1,34 @@
+<div class="collections">
+    <div class="collection-title">
+        Colections
+    </div>
+    <div class="collection-filter">
+        <input ui-input type="text" placeholder="Filter">
+    </div>
+    <div class="collection-list">
+        <ng-container *ngFor="let collection of collection_list; index as index">
+            <ng-container *ngTemplateOutlet="collection_template; context: {collection: collection, index: index}"></ng-container>
+        </ng-container>
+    </div>
+</div>
+
+<ng-template #collection_template let-collection="collection">
+    <article class="colletion-item" [class.open]="collection.open" (click)="collection.open = !collection.open">
+        {{collection.title}}
+        <span class="material-icons">
+            keyboard_arrow_{{collection.open ? 'up' : 'down'}}
+        </span>
+    </article>
+    
+    <div class="events" *ngIf="collection.events && collection.open">
+        <ng-container *ngFor="let event of collection.events; index as index">
+            <ng-container *ngTemplateOutlet="event_template; context: {event: event, index: index}"></ng-container>
+        </ng-container>
+    </div>
+</ng-template>
+
+<ng-template #event_template let-event="event">
+    <div class="event" (click)="open_event(event)"><span class="material-icons" [ngClass]="event.type">
+        {{event.type === 'emit' ? 'campaign' : 'hearing' }}
+    </span>{{event.title}}</div>
+</ng-template>

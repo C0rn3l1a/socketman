@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+@import "./theme/variables";
+@import "./theme/input";
+@import "./theme/button";
+@import "./theme/scrollbar";
+
+span, p, input, article, section {
+    color: var(--font_color);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Source Code Pro", monospace;
+    & ::selection {
+        background: var(--font_color);
+        color: var(--main_background);
+    }
+}
+
+html,
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--main_background);
+}

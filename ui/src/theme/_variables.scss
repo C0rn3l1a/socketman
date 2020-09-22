@@ -1,0 +1,40 @@
+$color_0: rgb(65, 68, 94);
+$color_1: rgb(102, 106, 134);
+$color_2: rgb(120, 138, 163);
+$color_3: rgb(146, 182, 177);
+$color_4: rgb(178, 201, 171);
+$color_5: rgb(232, 221, 181);
+$color_6: rgb(235, 223, 68);
+$color_7: rgb(147, 201, 131);
+$color_8: rgb(230, 90, 60);
+
+$border_color: #999;
+$disabled_color: rgb(210, 210, 210);
+$main_background: $color_0;//rgb(90, 70, 90);
+$sub_background: $color_1;//rgb(0,0,0, 0.33);
+$font_color: rgb(200, 255, 255);
+$button_color_1: $color_4;
+$button_color_2: $color_5;
+$highlight_color_hover : rgba(255,255,255,0.1);
+$highlight_color_active : rgba(255,255,255,0.25);
+
+:root {
+    --border_color: #{$border_color};
+    --main_background: #{$main_background};
+    --font_color: #{$font_color};
+    --sub_background: #{$sub_background};
+    --button_color_1: #{$button_color_1};
+    --button_color_2: #{$button_color_2};
+    --color_0: #{$color_0};
+    --color_1: #{$color_1};
+    --color_2: #{$color_2};
+    --color_3: #{$color_3};
+    --color_4: #{$color_4};
+    --color_5: #{$color_5};
+    --color_6: #{$color_6};
+    --color_7: #{$color_7};
+    --color_8: #{$color_8};
+    --highlight_color_hover: #{$highlight_color_hover};
+    --highlight_color_active: #{$highlight_color_active};
+    --disabled_color: #{$disabled_color};
+}
